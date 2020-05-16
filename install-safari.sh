@@ -53,7 +53,7 @@ defaults write com.apple.$SAFARI_SHORT_NAME com.apple.Safari.ContentPageGroupIde
 sudo safaridriver --enable
 
 if [ $BVER == "unstable" ] && [ -f "/Applications/Safari Technology Preview.app/Contents/MacOS/Safari Technology Preview" ]; then
-  /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
+  sudo /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
 fi
 
 # determine the script path
