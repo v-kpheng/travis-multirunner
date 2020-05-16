@@ -41,7 +41,7 @@ if [[ $BVER =~ $VERSION_REGEX ]] ; then
  fi
  TARGET_VERSION=$BVER
 elif [ $BROWSER == "safari" ] && [ $BVER == "unstable" ]; then
-  OSVER="${OSVER:-10.12}"
+  OSVER="${OSVER:-10.14}"
   # This is quite dangerous, it is scraping the safari download website for the URL. If the format
   # of the website changes then it won't work anymore. We should add safari to
   # browsers.contralis.info instead
