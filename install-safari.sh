@@ -52,6 +52,10 @@ defaults write com.apple.$SAFARI_SHORT_NAME com.apple.Safari.ContentPageGroupIde
 # Turn on Allow Remote Automation. This only works in Mac OS 10.12.6+
 sudo safaridriver --enable
 
+if [ $BVER == "unstable" ] && [ -f "/Applications/Safari Technology Preview.app/Contents/MacOS/Safari Technology Preview" ]; then
+  /Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver --enable
+fi
+
 # determine the script path
 # ref: http://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself
 pushd `dirname $0` > /dev/null
